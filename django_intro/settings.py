@@ -25,7 +25,7 @@ SECRET_KEY = 'v=+el_midlgsn0y1d%n%490z-k*8n9szsjn!q8luy8^n2azd9-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-intro-kingssafy.c9users.io']
+ALLOWED_HOSTS = ['django-intro-kingssafy.c9users.io', '127.0.0.1']
 
 
 # Application definition
@@ -46,7 +46,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware', # commentize this line will let post method work without csrftoken
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
