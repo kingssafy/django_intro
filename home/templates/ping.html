@@ -5,9 +5,14 @@
   <title></title>
 </head>
 <body>
+</body>
+</html>
+{% extends 'base.html' %}
+{% block body %}
+
   <form action="/home/pong/">
     <input type="text" name="data">
 <input type="submit" name="submit">
+
   </form>
-</body>
-</html>
+{% endblock body %}

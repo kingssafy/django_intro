@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block body %}
   <form action="/home/user_create/" method="POST">
     {% csrf_token %}
     <input type="text" name="nickname">
     <input type="password" name="pwd">
     <input type="submit" value="Submit">
   </form>
-</body>
-</html>
+{% endblock body %}
