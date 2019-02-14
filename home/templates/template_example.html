@@ -1,0 +1,85 @@
+<h3>1. loop</h3>
+{% for menu in my_list %}
+  <p>{{ menu }}</p>
+{% endfor %}
+<hr>
+{% for menu in my_list %}
+  {{ forloop.counter }}
+  {% if forloop.first %}
+    <p>jjajang + gochu</p>
+  {% else %}
+    <p>{{ menu }}</p>
+  {% endif %}
+{% endfor %}
+
+<hr>
+  {% for user in empty_list %}
+    <p> {{ user  }} </p>
+  {% empty %}
+    <p>no users are added yet.</p>
+  {% endfor %}
+<hr>
+<h3>2. conditional expressions</h3>
+{% if 'jjajang' in my_list %}
+  <p>jjajang in gochu garu !!</p>
+{% endif %}
+
+
+<hr>
+<h3>3. length filter</h3>
+{% for message in messages %}
+  {% if message|length > 5 %}
+    <p>too long</p>
+  {% else %}
+    <p>{{ message }}, {{ message|length }}</p>
+  {% endif %}
+{% endfor %}
+
+<hr>
+<h3>4.lorem ipsum</h3>
+  {% lorem %}
+  <hr>
+  {% lorem 3 w %}
+  <hr>
+  {% lorem 4 w random %}
+  <hr>
+  {% lorem 2 p %}
+  <hr>
+
+<h3>5. limit string.length</h3>
+  <p>{{ my_sentence|truncatewords:3 }}</p>
+  <p>{{ my_sentence|truncatechars:6 }}</p>
+  <p>{{ my_sentence|truncatewords:3 }}</p>
+
+<h3>6. string filter</h3>
+<p>{{ 'abc'|length }}</p>
+<p>{{ 'ABC'|lower }}</p>
+<p>{{ 'abc def'|capfirst }}</p>
+<p>{{ my_sentence| title }}</p>
+<p>{{ my_list|random }}</p>
+
+<h3> 7. operational expression</h3>
+  <p>{{ 4|add:6 }}</p>
+<hr>
+
+<h3>8. date</h3>
+  {% now "DATETIME_FORMAT" %}
+<br>  {% now "SHORT_DATETIME_FORMAT" %}
+<br>  {% now "DATE_FORMAT" %}
+<br>  {% now "SHORT_DATE_FORMAT" %}
+<hr>
+
+  {% now "Y sus m dnjf d dlf (D) h:i" %}
+
+<br>
+  
+{% now "Y" as current_year %}
+  copyright {{ current_year }}
+<hr>
+{{ datetimenow }}
+<br>
+{{ datetimenow|date:"SHORT_DATE_FORMAT" }}
+
+<hr>
+<h3>9. etc</h3>
+{{ 'google.com'|urlize }}
