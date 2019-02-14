@@ -52,3 +52,5 @@ def template_example(request):
              }
             )
 
+def static_example(request):
+    return render(request, 'static_example.html')
