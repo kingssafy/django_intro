@@ -31,13 +31,13 @@ ALLOWED_HOSTS = ['django-intro-kingssafy.c9users.io', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'utilities.apps.UtilitiesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     # my apps
     'home.apps.HomeConfig',
 ]
