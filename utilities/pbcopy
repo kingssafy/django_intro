@@ -28,7 +28,7 @@ def imagepick(request):
     return render(request, 'utilities/imagepick.html')
 
 def today(request):
-    key = os.getenv("WEATHERKEY")
+    key = "a9d8c409a6a251aac033882200631686"
     url = "https://api.openweathermap.org/data/2.5/weather?q=Daejeon,kr&lang=kr&APPID="
     url += key
     info = requests.get(url).json()

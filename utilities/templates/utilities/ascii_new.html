@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+ ASCII MAKE!!
+{% endblock title %}
+{% block body %}
+<form action="/utilities/ascii_make/">
+  <input type="text" name="text">
+  <select name="font">
+      {% for font in fonts %}
+      <option value="{{ font }}">{{ font  }}</option>
+      {% endfor %}
+  </select>
+  <input type="submit" name="Submit">
+</form>
+{% endblock body %}
